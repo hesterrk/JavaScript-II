@@ -5,25 +5,18 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 /* 
 
-  // GIVEN THIS PROBLEM:
-  // cb is actually a function - 
-  // inuputs to functions can be other functions
-  
+  // EXAMPLES:
+
+  1)
+
   function firstItem(arr, cb) {
-    // firstItem passes the first item of the given array to the callback function.
+    // = firstItem passes the first item of the given array to the callback function.
 
     return cb(arr[0]);
   }
   
-// higher order function returns another funtion
 
-  // SOLUTION:
-
-  function firstItem(arr, cb) {
-    return cb(arr[0]);
-  }
-
-  // NOTES ON THE SOLUTION:
+  // NOTES :
 
   // firstItem is a higher order function.
   // It expects a callback (referred to as `cb`) as its second argument.
@@ -72,6 +65,7 @@ function multiplyNums(x, y, cb) {
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
+  
   cb(list.includes(item));
 
 }
