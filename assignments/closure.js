@@ -23,6 +23,8 @@ var firstVar = 'first one';
 
 // ==== Challenge 2: Implement a "counter maker" function ====
 
+//showing how functions return other functions 
+
   // IMPLEMENTATION OF counterMaker:
   // 1- Declare a `count` variable with a value of 0. We will be mutating it, so declare it using `let`!
 
@@ -31,30 +33,50 @@ var firstVar = 'first one';
   //      NOTE: This `counter` function, being nested inside `counterMaker`,
   //      "closes over" the `count` variable. It can "see" it in the parent scope!
 
- 
+
+
   const counterCreator = () => {  
-    var count = 0;
-    return function() { 
+    let count = 0;
+    function counter() { 
+      if (count === 10) {
+        count = 0
+      }
+  
       
-      return count + 1
+    
+      count = count + 1
+      return count
     };
+    return counter
+
+
   }
   
-  var counter = counterCreator();
-  console.log(counter);
-  console.log(counter());
- 
-
-
-
-
-
-
+  var mycounter = counterCreator();
+  console.log(mycounter());
+  console.log(mycounter());
+  console.log(mycounter());
+  console.log(mycounter());
+  console.log(mycounter());
+  console.log(mycounter());
+  console.log(mycounter());
+  console.log(mycounter());
+  console.log(mycounter());
+  console.log(mycounter());
+  console.log(mycounter());
 
 
 // ==== Challenge 3: Make `counterMaker` more sophisticated ====
 // It should have a `limit` parameter. Any counters we make with `counterMaker`
 // will refuse to go over the limit, and start back at 1.
+limit = 10;
+
+//if..else statement
+
+
+
+
+
 
 
 
