@@ -69,13 +69,9 @@ var firstVar = 'first one';
 // ==== Challenge 3: Make `counterMaker` more sophisticated ====
 // It should have a `limit` parameter. Any counters we make with `counterMaker`
 // will refuse to go over the limit, and start back at 1.
-limit = 10;
+// limit = 10;
 
-//if..else statement
-
-
-
-
+//if statement or ternary operator 
 
 
 
@@ -85,7 +81,51 @@ const counterFactory = () => {
   // Return an object that has two methods called `increment` and `decrement`.
   // `increment` should increment a counter variable in closure scope and return it.
   // `decrement` should decrement the counter variable and return it.
+
+let count = 7
+console.log(count);
+
+let increment = () => {
+  let increaseNumber = ++count
+    return increaseNumber
+  }
+
+let decrement = () => {
+  let decreaseNumber = --counter
+    return decreaseNumber
+  
+}
+
+let myObject = {increment, decrement}
+
+return myObject;
+
 };
+
+var countercounter = counterFactory();
+
+console.log(countercounter.increment());
+console.log(countercounter.decrement());
+
+
+
+
+// function increment() {
+  //   let increaseNumber = ++count
+  //   return increaseNumber
+  // }
+  // return increment
+  
+  
+  // function decrement() {
+  // let decreaseNumber = --count
+  // if(count > 5) {
+  //   return decreaseNumber
+  // }
+  
+
+  
+
 
 
 
