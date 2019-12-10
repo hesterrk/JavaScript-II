@@ -153,13 +153,18 @@ runners.map((size) => sizesInLower.push(`Lower Case sizes: ${size.shirt_size}`.t
 console.log(sizesInLower);
 
 
+// Problem 3- .filter
+
+//We want to select only those at 'Skinix' and 'Gigashots' company 
+
+let filterCompany = [];
+
+runners.filter((filtering) => filtering.company_name === 'Skinix' || filtering.company_name === 'Gigashots' ? filterCompany.push(filtering) : false
 
 
+)
 
-// Problem 3
-
-
-
+console.log(filterCompany);
 
 
 
