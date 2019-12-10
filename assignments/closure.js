@@ -110,18 +110,7 @@ console.log(countercounter.decrement());
 
 
 
-// function increment() {
-  //   let increaseNumber = ++count
-  //   return increaseNumber
-  // }
-  // return increment
-  
-  
-  // function decrement() {
-  // let decreaseNumber = --count
-  // if(count > 5) {
-  //   return decreaseNumber
-  // }
+
   
 
   
