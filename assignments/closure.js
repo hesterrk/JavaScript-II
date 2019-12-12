@@ -44,7 +44,7 @@ var firstVar = 'first one';
   
       
     
-      count = count + 1
+      count = count + 1 //same as saying ++count
       return count
     };
     return counter
@@ -53,6 +53,9 @@ var firstVar = 'first one';
   }
   
   var mycounter = counterCreator();
+
+  //we have to call mycounter with parentheses as mycounter stores what counterCreator returns 
+  //return value gets assigned to mycounter
   console.log(mycounter());
   console.log(mycounter());
   console.log(mycounter());
@@ -64,6 +67,9 @@ var firstVar = 'first one';
   console.log(mycounter());
   console.log(mycounter());
   console.log(mycounter());
+
+
+
 
 
 // ==== Challenge 3: Make `counterMaker` more sophisticated ====

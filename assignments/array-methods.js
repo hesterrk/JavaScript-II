@@ -159,10 +159,7 @@ console.log(sizesInLower);
 
 let filterCompany = [];
 
-runners.filter((filtering) => filtering.company_name === 'Skinix' || filtering.company_name === 'Gigashots' ? filterCompany.push(filtering) : false
-
-
-)
+runners.filter((filtering) => filtering.company_name === 'Skinix' || filtering.company_name === 'Gigashots' ? filterCompany.push(filtering) : false)
 
 console.log(filterCompany);
 
