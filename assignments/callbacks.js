@@ -154,15 +154,30 @@ else {
 
 )
 
-// console.log(contains())
-
-
-
-
 /* STRETCH PROBLEM */
 
-function removeDuplicates(array, cb) {
+function removeDuplicates(array) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
+
+  //using 2 methods- indexOf(returns the first occurence of a specified value- if same value is repeated then it will return false) and filter
+  //we have to equal the indexOf to index- if the condition is the same then it is true (unique item- no repeat), if it is different (e.g different numbers then it will return false- means there is a repeat)
+  //https://medium.com/dailyjs/how-to-remove-array-duplicates-in-es6-5daa8789641c
+
+  // items = items.filter((item, index) => { return items.indexOf(item) === index})
+
+  return items.filter((item, index) =>  items.indexOf(item) === index)
+
+
+// return cb(array); 
+
+
+
 }
+
+console.log(removeDuplicates(items))
+
+// removeDuplicates(items)
+
+
