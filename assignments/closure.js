@@ -97,7 +97,7 @@ let increment = () => {
   }
 
 let decrement = () => {
-  let decreaseNumber = --counter
+  let decreaseNumber = --count
     return decreaseNumber
   
 }

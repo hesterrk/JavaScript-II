@@ -111,7 +111,6 @@ function sumNums(x, y, cb) {
 }
 
 
-
 sumNums(6, 10, function(num1, num2) { console.log(num1 + num2) });
 
 
@@ -167,17 +166,14 @@ function removeDuplicates(array) {
 
   // items = items.filter((item, index) => { return items.indexOf(item) === index})
 
-  return items.filter((item, index) =>  items.indexOf(item) === index)
+ return items.filter((item, index) => items.indexOf(item) === index)
 
 
 // return cb(array); 
 
-
-
 }
 
-console.log(removeDuplicates(items))
 
-// removeDuplicates(items)
+
 
 
