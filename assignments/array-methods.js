@@ -57,29 +57,114 @@ const runners = [
 
 // ==== Challenge 1: Use .forEach() ====
 // The event director needs both the first and last names of each runner for their running bibs. Combine both the first and last names and populate a new array called `fullNames`. This array will contain just strings.
+//remember- strings so we need to access them using string syntax
+
+
 let fullNames = [];
+
+runners.forEach((obj)=> fullNames.push(`First name: ${obj.first_name} Last name: ${obj.last_name}`))
+
 console.log(fullNames);
+
+
+
+
+
+
 
 // ==== Challenge 2: Use .map() ====
 // The event director needs to have all the runners' first names in uppercase because the director BECAME DRUNK WITH POWER. Populate an array called `firstNamesAllCaps`. This array will contain just strings.
+
+
 let firstNamesAllCaps = [];
+
+runners.map((runner) => firstNamesAllCaps.push(`First name: ${runner.first_name}` .toUpperCase()))
+
 console.log(firstNamesAllCaps);
 
 // ==== Challenge 3: Use .filter() ====
 // The large shirts won't be available for the event due to an ordering issue. We need a filtered version of the runners array, containing only those runners with large sized shirts so they can choose a different size. This will be an array of objects.
+
+//without arrow function
+//https://codeburst.io/javascript-the-conditional-ternary-operator-explained-cac7218beeff
+
+
+// let runnersLargeSizeShirt = [];
+
+// runners.filter(function(run) {
+
+//   runners.shirt_size === 'L' ? runnersLargeSizeShirt.push(run) : false; 
+
+// });
+
+
 let runnersLargeSizeShirt = [];
+
+runners.filter((runner) => runner.shirt_size === 'L' ? runnersLargeSizeShirt.push(runner): false)
+
+
 console.log(runnersLargeSizeShirt);
 
 // ==== Challenge 4: Use .reduce() ====
 // The donations need to be tallied up and reported for tax purposes. Add up all the donations and save the total into a ticketPriceTotal variable.
-let ticketPriceTotal = 0;
+
+let ticketPriceTotal = runners.reduce((priceTotal, runner) => priceTotal + runner.donation, 0);
+
 console.log(ticketPriceTotal);
+
+
+//current value each number one by one in the array is set to this when it gets looped over -we call this item in te array whatever we want like the cb- each time the function is called you get a value in the array (donation number)
+//each time the function is called the current value is addded to the accumulator  
+//we return the sum of the accumulator + currentValue -the sum of this is stored by the reduce function which then becomes the accumulator value- next time it runs the accumulator number is different and so forth 
+//we need to intialise the accumulator to 0
+//this method takes 2 arguments: 1st- the cb: ((accumulator, currentValue) => { return accumulator + currentValue})
+//2nd: inialisation of accumulator: 0 
+//we equal the function to a single value 
+//https://www.youtube.com/watch?v=g1C40tDP0Bk
+
+
+//noraml way without arrow function 
+
+// let ticketPriceTotal = runners.reduce((totalPrice, donations) => {
+//   return totalPrice + donations.donation;
+
+// }, 0 )
+
+
 
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
-// Problem 1
+// Problem 1: .forEach  
+// The event director needs the emails of each runner to email them updates for the run. Populate this into a new array called `emailRunners`. This array will contain just strings.
 
-// Problem 2
+let emailRunners = []; 
 
-// Problem 3
+runners.forEach((run) => emailRunners.push(`Emails:${run.email}`))
+
+console.log(emailRunners);
+
+
+// Problem 2- .map
+// The sizes need to be in lowercase. Populate an array called `sizesInLower`. This array will contain just strings.
+
+let sizesInLower = [];
+
+runners.map((size) => sizesInLower.push(`Lower Case sizes: ${size.shirt_size}`.toLowerCase()))
+
+console.log(sizesInLower);
+
+
+// Problem 3- .filter
+
+//We want to select only those at 'Skinix' and 'Gigashots' company 
+
+let filterCompany = [];
+
+runners.filter((filtering) => filtering.company_name === 'Skinix' || filtering.company_name === 'Gigashots' ? filterCompany.push(filtering) : false)
+
+console.log(filterCompany);
+
+
+
+
